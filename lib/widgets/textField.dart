@@ -4,22 +4,18 @@ class MyTextField extends StatelessWidget {
   final String label;
   final bool obscure;
   final controller;
+  final bool readOnly;
 
-  MyTextField(
-      {Key? key,
-      required String this.label,
-      required TextEditingController this.controller,
-      required bool this.obscure})
-      : super(key: key);
+  const MyTextField({Key? key, required this.label, required TextEditingController this.controller, required this.obscure ,required this.readOnly}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return TextFormField(
+      readOnly: readOnly,
       controller: controller,
       obscureText: obscure,
-      decoration:
-          InputDecoration(border: OutlineInputBorder(), labelText: label),
+      decoration: InputDecoration(border: const OutlineInputBorder(), labelText: label),
       validator: null,
     );
   }

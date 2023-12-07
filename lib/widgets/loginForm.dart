@@ -5,9 +5,9 @@ import './textField.dart';
 class LoginForm extends StatelessWidget {
   const LoginForm(
       {Key? key,
-      required TextEditingController this.usernameTextController,
-      required TextEditingController this.passwordTextController,
-      required VoidCallback this.onPressed})
+      required this.usernameTextController,
+      required this.passwordTextController,
+      required this.onPressed})
       : super(key: key);
 
   final TextEditingController usernameTextController;
@@ -20,16 +20,18 @@ class LoginForm extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 25, bottom: 20),
           child: MyTextField(
+            readOnly: false,
             label: "Username",
             controller: usernameTextController,
             obscure: false,
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
           child: MyTextField(
+            readOnly: false,
             label: "Password",
             controller: passwordTextController,
             obscure: true,
@@ -37,7 +39,7 @@ class LoginForm extends StatelessWidget {
         ),
         MyButton(
           onPressed: onPressed,
-          label: Text("Login"),
+          label: const Text("Login"),
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         )

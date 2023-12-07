@@ -33,14 +33,39 @@ dependencies:
   provider: ^6.0.5
   cupertino_icons: ^1.0.2
   lottie: ^1.2.1
-  intl: ^0.17.0
-
+  intl : ^0.18.0 
+  jiffy: ^6.1.0
+  rive: ^0.7.0
+  http: ^1.1.0
+  accordion: ^2.6.0
+  internet_connection_checker: ^1.0.0+1
+  after_layout: ^1.2.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.0"
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "contents/images/logo_marea.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "contents/images/logo_marea.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "contents/images/logo_marea.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "contents/images/logo_marea.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -68,6 +93,7 @@ flutter:
   assets :
   - contents/images/
   - contents/animations/
+  - contents/RiveAssets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.app_licenze">
     <application
-        android:label="app_licenze"
+        android:label="App Licenze"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -19,6 +19,7 @@
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
+              android:enableOnBackInvokedCallback="true"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,4 +32,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
